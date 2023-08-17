@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Computer Architecture &amp; Digital VLSI - SUGANDHA SHARMA</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1691178341" title="wsite-theme-css" />
+<link href='http://cdn2.editmysite.com/fonts/Lato/font.css?2' rel='stylesheet' type='text/css' />
+<link href='http://cdn2.editmysite.com/fonts/Fjalla_One/font.css?2' rel='stylesheet' type='text/css' />
+
+<link href='http://cdn2.editmysite.com/fonts/Questrial/font.css?2' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {font-family:"Questrial" !important;}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {font-style:normal !important;}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+@media screen and (min-width: 767px) {.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {font-size:77px !important;}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+}</style>
+<style>
+.wsite-background {background-image: url("/uploads/3/8/5/4/38544823/background-images/1520324753.jpeg") !important;background-repeat: no-repeat !important;background-position: 50% 50% !important;background-size: 100% !important;background-color: transparent !important;background: inherit;}
+body.wsite-background {background-attachment: fixed !important;}.wsite-background.wsite-custom-background{ background-size: cover !important}
+</style>
+		<script src='files/templateArtifacts.js?1674078388'></script>
+<script>
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var ASSETS_BASE = '//cdn2.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+</script>
+<script src='https://cdn2.editmysite.com/js/jquery-1.8.3.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">
+		function initCustomerAccountsModels() {
+					(function(){_W.setup_rpc({"url":"\/ajax\/api\/JsonRPC\/CustomerAccounts\/","actions":{"CustomerAccounts":[{"name":"login","len":2,"multiple":false,"standalone":false},{"name":"logout","len":0,"multiple":false,"standalone":false},{"name":"getSessionDetails","len":0,"multiple":false,"standalone":false},{"name":"getAccountDetails","len":0,"multiple":false,"standalone":false},{"name":"getOrders","len":0,"multiple":false,"standalone":false},{"name":"register","len":4,"multiple":false,"standalone":false},{"name":"emailExists","len":1,"multiple":false,"standalone":false},{"name":"passwordReset","len":1,"multiple":false,"standalone":false},{"name":"passwordUpdate","len":3,"multiple":false,"standalone":false},{"name":"validateSession","len":1,"multiple":false,"standalone":false}]},"namespace":"_W.CustomerAccounts.RPC"});
+_W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":"_W.CustomerAccounts.BackboneModelData","collection_namespace":"_W.CustomerAccounts.BackboneCollectionData","bootstrap_namespace":"_W.CustomerAccounts.BackboneBootstrap","models":{"CustomerAccounts":{"_class":"CustomerAccounts.Model.CustomerAccounts","defaults":null,"validation":null,"types":null,"idAttribute":null,"keydefs":null}},"collections":{"CustomerAccounts":{"_class":"CustomerAccounts.Collection.CustomerAccounts"}},"bootstrap":[]});
+})();
+		}
+		if(document.createEvent && document.addEventListener) {
+			var initEvt = document.createEvent('Event');
+			initEvt.initEvent('customerAccountsModelsInitialized', true, false);
+			document.dispatchEvent(initEvt);
+		} else if(document.documentElement.initCustomerAccountsModels === 0){
+			document.documentElement.initCustomerAccountsModels++
+		}
+		</script>
+		<script type="text/javascript"> _W = _W || {}; _W.securePrefix='UNSET'; </script><script>_W = _W || {};
+			_W.customerLocale = "en_US";
+			_W.storeName = null;
+			_W.isCheckoutReskin = false;
+			_W.storeCountry = "CA";
+			_W.storeCurrency = "USD";
+			_W.storeEuPrivacyPolicyUrl = "";
+			com_currentSite = "744217990321245025";
+			com_userID = "38544823";</script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"> _W.recaptchaUrl = "https://www.google.com/recaptcha/api.js"; </script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	function initFlyouts(){
+		initPublishedFlyoutMenus(
+			[{"id":"506423870749017847","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"729878501233056009","title":"CV","url":"https:\/\/www.sugandhasharma.com\/uploads\/3\/8\/5\/4\/38544823\/cv_sharma.pdf","target":"_blank","nav_menu":false,"nonclickable":false},{"id":"301133086307922829","title":"Industry Experience","url":"industry-experience.html","target":"","nav_menu":false,"nonclickable":false},{"id":"322483107564495144","title":"Awards","url":"awards.html","target":"","nav_menu":false,"nonclickable":false},{"id":"256549450650103548","title":"Other","url":"other1.html","target":"","nav_menu":false,"nonclickable":false},{"id":"874517248395231023","title":"Journal Club","url":"https:\/\/compneurojc.github.io\/","target":"_blank","nav_menu":false,"nonclickable":false}],
+			"532251941959169271",
+			'',
+			'active',
+			false,
+			{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+			{}
+		)
+	}
+//-->
+</script>
+		
+		
+	</head>
+	<body class="no-header-page wsite-theme-light  wsite-page-computer-architecture-digital-vlsi"><div class="wrapper">
+    <div class="paris-header">
+      <div class="container">
+        <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+      	<div class="logo"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">SUGANDHA SHARMA</span>
+	
+	</a>
+
+</span></div>
+        <div class="nav desktop-nav"><ul class="wsite-menu-default">
+		<li id="pg506423870749017847" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg729878501233056009" class="wsite-menu-item-wrap">
+			<a
+						href="https://www.sugandhasharma.com/uploads/3/8/5/4/38544823/cv_sharma.pdf"
+					target="_blank"
+				class="wsite-menu-item"
+				>
+				CV
+			</a>
+			
+		</li>
+		<li id="pg301133086307922829" class="wsite-menu-item-wrap">
+			<a
+						href="industry-experience.html"
+				class="wsite-menu-item"
+				>
+				Industry Experience
+			</a>
+			<div class="wsite-menu-wrap" style="display:none">
+	<ul class="wsite-menu">
+		<li id="wsite-nav-230625046855088645"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="amd.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			AMD
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-204495407664726272"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="nvidia.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Nvidia
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-154977770287316115"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="blackberry.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			BlackBerry
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-809314202800559479"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="phoenix-interactive-design.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Phoenix Interactive Design
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-430315635556147731"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="christie-digital-systems.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Christie Digital Systems
+		</span>
+	</a>
+	
+</li>
+
+	</ul>
+</div>
+
+		</li>
+		<li id="pg322483107564495144" class="wsite-menu-item-wrap">
+			<a
+						href="awards.html"
+				class="wsite-menu-item"
+				>
+				Awards
+			</a>
+			
+		</li>
+		<li id="pg256549450650103548" class="wsite-menu-item-wrap">
+			<a
+						href="other1.html"
+				class="wsite-menu-item"
+				>
+				Other
+			</a>
+			
+		</li>
+		<li id="pg874517248395231023" class="wsite-menu-item-wrap">
+			<a
+						href="https://compneurojc.github.io/"
+					target="_blank"
+				class="wsite-menu-item"
+				>
+				Journal Club
+			</a>
+			
+		</li>
+</ul>
+</div>
+      </div><!-- end .container -->
+	  </div><!-- end .header -->
+
+    <div class="main-wrap">
+      <div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-17 wsite-custom-background"  >
+		<div class="wsite-section-content">
+        <div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title" style="text-align:left;"><font color="#2a2a2a">5-Stage Pipelined MIPS processor</font></h2>
+
+<div class="paragraph"><font color="#2a2a2a">Code: </font><a href="https://github.com/s72sue/Pipelined-MIPS-Processor" target="_blank"><font color="#da4444">github repository</font></a><br /><br /><font color="#2a2a2a">Developed a 5-stage pipelined MIPS processor using the synthesizable subset of Verilog and the Modelsim simulator. The processor executed C programs compiled using GNU GCC.&nbsp;The inputs to the processor were the compiled binary files given in the&nbsp;</font><a href="http://en.wikipedia.org/wiki/SREC_(file_format)" target="_blank">SREC format</a><font color="#2a2a2a">&nbsp;which were&nbsp;parsed using an SREC parser and fed into the processor. The architecture of the processor is as shown below:</font></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:right">
+<a>
+<img src="uploads/3/8/5/4/38544823/5460028_orig.png" alt="Picture" style="width:100%;max-width:784px" />
+</a>
+<div style="display:block;font-size:90%">Processor Architecture</div>
+</div></div>
+
+<div><div style="margin: 10px 0 0 -10px">
+<a title="Download file: mips_processor_code.zip" href="uploads/3/8/5/4/38544823/mips_processor_code.zip"><img src="http://www.weebly.com/weebly/images/file_icons/gz.png" width="36" height="36" style="float: left; position: relative; left: 0px; top: 0px; margin: 0 15px 15px 0; border: 0;" /></a><div style="float: left; text-align: left; position: relative;"><table style="font-size: 12px; font-family: tahoma; line-height: .9;"><tr><td colspan="2"><b> mips_processor_code.zip</b></td></tr><tr style="display: none;"><td>File Size:  </td><td>16 kb</td></tr><tr style="display: none;"><td>File Type:  </td><td> zip</td></tr></table><a title="Download file: mips_processor_code.zip" href="uploads/3/8/5/4/38544823/mips_processor_code.zip" style="font-weight: bold;">Download File</a></div>
+</div>
+
+<hr style="clear: both; width: 100%; visibility: hidden"></hr></div>
+
+<div class="paragraph" style="text-align:left;"><ul><li><strong style="color: rgb(42, 42, 42);">SREC Parser and Instruction Memory:&nbsp;</strong><font color="#2a2a2a">Byte Addressable memory supporting addressing individual bytes and following ports:&nbsp;clock, address (32-bits), data in (32-bits), data out (32-bits), access_size (2 bits), and read/write (1 bit).&nbsp;Parsed a binary file given in in the&nbsp;</font><a href="http://en.wikipedia.org/wiki/SREC_(file_format)" target="_self" style="color: rgb(218, 68, 68);"><font color="#da4444">SREC format</font></a><font color="#515151">,</font><font color="#2a2a2a"> and stored the contents at the specified addresses in the byte-addressable memory&nbsp;</font></li><li><font color="#2a2a2a"><strong>Fetch and Decode Stage:&nbsp;</strong>Created a fetch module which supplied an address stored in the program counter (PC) register to the address signal of the main memory module. The output from the main memory entered the decode module through an input port of the decode module. Once the address in PC is supplied to the address line of the main memory, the fetch stage increments the PC by 4. Thus, in the next cycle the next instruction will be fetched from the main memory.&nbsp;</font></li><li><font color="#2a2a2a"><strong>Register File and ALU:</strong><strong>&nbsp;</strong>&nbsp;Implemented a register file ensuring that the reads happen before writes in the same clock cycle. The outputs of the register file (rsOut, rtOut), the PC and the IR (instruction bits) were passed to the execute stage. Execute stage consisted of&nbsp;a functional unit (integer ALU) which implemented a subset of the operation from the MIPS ISA. The branches were resolved in the execute stage and the effective address was also computed in the execute stage.</font></li><li><font color="#2a2a2a"><strong>Data Memory and WriteBack:&nbsp;</strong>Implemented the Data Memory and initilised it using the SREC files. Also implemented the writeBack logic to update the register file in each cycle.</font></li><li><font color="#2a2a2a"><strong>Stalling and Bypassing/Forwarding:&nbsp;</strong>Pipelined the processor such that the instruction execution was overlapped across all the stages mentioned above. Implemented the basic method to avoid RAW hazards. Also implemented M/X, W/X, W/M forwarding.&nbsp;</font></li></ul></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<h2 class="wsite-content-title" style="text-align:left;"><font color="#2a2a2a">1-bit Mirror Adder: &nbsp;Schematic --&gt; Layout --&gt; Extraction&nbsp;</font></h2>
+
+<div class="paragraph" style="text-align:left;"><font color="#2a2a2a">Designed and layed-out a single bit full adder.&nbsp;<br />Performed analysis pertaining to the&nbsp;transistor sizing,&nbsp;critical path, power consumption and propagation delay.<br />Compared the post-layout results with schematic simulations.&nbsp;<br /><br /><strong>Specs:&nbsp;</strong></font><ul><li><span><font color="#2a2a2a">Worst case propagation delay &lt; 375ps</font></span></li><li><span><font color="#2a2a2a">Average Power Consumption &lt; 200uW</font></span></li><li><font color="#2a2a2a">Rise/Fall time of inputs = 50ps</font></li></ul></div>
+
+<div><div style="height: 20px; overflow: hidden;"></div>
+				<div id='326540047607831512-gallery' class='imageGallery' style='line-height: 0px; padding: 0; margin: 0'>
+<div id='326540047607831512-imageContainer0' style='float:left;width:33.28%;margin:0;'><div id='326540047607831512-insideImageContainer0' style='position:relative;margin:5px;'><div class='galleryImageBorder' style='border-width:1px;padding:3px;'><div class='galleryImageHolder galleryCaptionHover' style='position:relative; width:100%; padding:0 0 75%;overflow:hidden;'><div class='galleryInnerImageHolder'><a href='uploads/3/8/5/4/38544823/2413304_orig.png' rel='lightbox[gallery326540047607831512]' title='Transistor Sizing'><img src='uploads/3/8/5/4/38544823/2413304.png' class='galleryImage' _width='400' _height='175' style='position:absolute;border:0;width:171.43%;top:0%;left:-35.71%' /><div class='galleryCaptionHolder partialImageGalleryCaption' style=''>
+					<div class='galleryCaptionHolderInnerBg'></div>
+					<div class='galleryCaptionHolderInner'>
+						<div class='galleryCaptionInnerTextHolder'>
+							<div class='galleryCaptionInnerText'>Transistor Sizing</div>
+						</div>
+					</div>
+				</div></a></div></div></div></div></div><div id='326540047607831512-imageContainer1' style='float:left;width:33.28%;margin:0;'><div id='326540047607831512-insideImageContainer1' style='position:relative;margin:5px;'><div class='galleryImageBorder' style='border-width:1px;padding:3px;'><div class='galleryImageHolder galleryCaptionHover' style='position:relative; width:100%; padding:0 0 75%;overflow:hidden;'><div class='galleryInnerImageHolder'><a href='uploads/3/8/5/4/38544823/4412953_orig.png' rel='lightbox[gallery326540047607831512]' title='Adder Schematic'><img src='uploads/3/8/5/4/38544823/4412953.png' class='galleryImage' _width='400' _height='185' style='position:absolute;border:0;width:162.16%;top:0%;left:-31.08%' /><div class='galleryCaptionHolder partialImageGalleryCaption' style=''>
+					<div class='galleryCaptionHolderInnerBg'></div>
+					<div class='galleryCaptionHolderInner'>
+						<div class='galleryCaptionInnerTextHolder'>
+							<div class='galleryCaptionInnerText'>Adder Schematic</div>
+						</div>
+					</div>
+				</div></a></div></div></div></div></div><div id='326540047607831512-imageContainer2' style='float:left;width:33.28%;margin:0;'><div id='326540047607831512-insideImageContainer2' style='position:relative;margin:5px;'><div class='galleryImageBorder' style='border-width:1px;padding:3px;'><div class='galleryImageHolder galleryCaptionHover' style='position:relative; width:100%; padding:0 0 75%;overflow:hidden;'><div class='galleryInnerImageHolder'><a href='uploads/3/8/5/4/38544823/4109802_orig.png' rel='lightbox[gallery326540047607831512]' title='Adder Layout'><img src='uploads/3/8/5/4/38544823/4109802.png' class='galleryImage' _width='400' _height='288' style='position:absolute;border:0;width:104.17%;top:0%;left:-2.08%' /><div class='galleryCaptionHolder partialImageGalleryCaption' style=''>
+					<div class='galleryCaptionHolderInnerBg'></div>
+					<div class='galleryCaptionHolderInner'>
+						<div class='galleryCaptionInnerTextHolder'>
+							<div class='galleryCaptionInnerText'>Adder Layout</div>
+						</div>
+					</div>
+				</div></a></div></div></div></div></div><div id='326540047607831512-imageContainer3' style='float:left;width:33.28%;margin:0;'><div id='326540047607831512-insideImageContainer3' style='position:relative;margin:5px;'><div class='galleryImageBorder' style='border-width:1px;padding:3px;'><div class='galleryImageHolder galleryCaptionHover' style='position:relative; width:100%; padding:0 0 75%;overflow:hidden;'><div class='galleryInnerImageHolder'><a href='uploads/3/8/5/4/38544823/4371135_orig.png' rel='lightbox[gallery326540047607831512]' title='Test bench for delay measurements'><img src='uploads/3/8/5/4/38544823/4371135.png' class='galleryImage' _width='400' _height='174' style='position:absolute;border:0;width:172.41%;top:0%;left:-36.21%' /><div class='galleryCaptionHolder partialImageGalleryCaption' style=''>
+					<div class='galleryCaptionHolderInnerBg'></div>
+					<div class='galleryCaptionHolderInner'>
+						<div class='galleryCaptionInnerTextHolder'>
+							<div class='galleryCaptionInnerText'>Test bench for delay measurements</div>
+						</div>
+					</div>
+				</div></a></div></div></div></div></div><div id='326540047607831512-imageContainer4' style='float:left;width:33.28%;margin:0;'><div id='326540047607831512-insideImageContainer4' style='position:relative;margin:5px;'><div class='galleryImageBorder' style='border-width:1px;padding:3px;'><div class='galleryImageHolder galleryCaptionHover' style='position:relative; width:100%; padding:0 0 75%;overflow:hidden;'><div class='galleryInnerImageHolder'><a href='uploads/3/8/5/4/38544823/3452303_orig.png' rel='lightbox[gallery326540047607831512]' title='Test Bench for Power Measuements'><img src='uploads/3/8/5/4/38544823/3452303.png' class='galleryImage' _width='400' _height='188' style='position:absolute;border:0;width:159.57%;top:0%;left:-29.79%' /><div class='galleryCaptionHolder partialImageGalleryCaption' style=''>
+					<div class='galleryCaptionHolderInnerBg'></div>
+					<div class='galleryCaptionHolderInner'>
+						<div class='galleryCaptionInnerTextHolder'>
+							<div class='galleryCaptionInnerText'>Test Bench for Power Measuements</div>
+						</div>
+					</div>
+				</div></a></div></div></div></div></div><div id='326540047607831512-imageContainer5' style='float:left;width:33.28%;margin:0;'><div id='326540047607831512-insideImageContainer5' style='position:relative;margin:5px;'><div class='galleryImageBorder' style='border-width:1px;padding:3px;'><div class='galleryImageHolder galleryCaptionHover' style='position:relative; width:100%; padding:0 0 75%;overflow:hidden;'><div class='galleryInnerImageHolder'><a href='uploads/3/8/5/4/38544823/2376835_orig.png' rel='lightbox[gallery326540047607831512]' title='Worst Case Propagation Delay Simulation'><img src='uploads/3/8/5/4/38544823/2376835.png' class='galleryImage' _width='400' _height='180' style='position:absolute;border:0;width:166.67%;top:0%;left:-33.33%' /><div class='galleryCaptionHolder partialImageGalleryCaption' style=''>
+					<div class='galleryCaptionHolderInnerBg'></div>
+					<div class='galleryCaptionHolderInner'>
+						<div class='galleryCaptionInnerTextHolder'>
+							<div class='galleryCaptionInnerText'>Worst Case Propagation Delay Simulation</div>
+						</div>
+					</div>
+				</div></a></div></div></div></div></div><span style='display: block; clear: both; height: 0px; overflow: hidden;'></span>
+</div>
+
+				<div style="height: 20px; overflow: hidden;"></div></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<h2 class="wsite-content-title" style="text-align:left;"><font color="#2a2a2a">High Performance D-Flip Flop - Dynamic TSPC (True Single Phase Clock)&nbsp;</font></h2>
+
+<div class="paragraph" style="text-align:left;"><br /><font color="#2a2a2a"><strong><font size="3">Part1 - Flip Flop Design</font></strong><br />Designed a high performance D-Flip-Flop (DFF). Performed a literature review of various flip-flop topologies and chose the Dynamic TSPC topology for implementation based on the comparitive analysis.<br /><br />Performed analysis using the following metrics:<br />&bull; Data-to-output (tp D-Q), Setup time (tp Setup), Clock-to-output (tp C-Q), Average Power (Pavg) &nbsp;<br />&bull; Considered the following Corners: SS, SF, TT, FS, FF and Temperatures: -25C, 27C, 85C&nbsp;<br />&bull; PDP vs. VDD (Worst corner, Worst temperature), sweep VDD in 100mV steps&nbsp;<br />&bull; Monte Carlo simulations: 100 samples @ (TT, 1.8V, 27C)&nbsp;<br /><br /><br /><strong>Results:</strong></font></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/3/8/5/4/38544823/1760701_orig.png" alt="Picture" style="width:100%;max-width:1100px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div><div style="height: 20px; overflow: hidden;"></div>
+				<div id='413381932553911876-gallery' class='imageGallery' style='line-height: 0px; padding: 0; margin: 0'>
+<div id='413381932553911876-imageContainer0' style='float:left;width:33.28%;margin:0;'><div id='413381932553911876-insideImageContainer0' style='position:relative;margin:5px;'><div class='galleryImageBorder' style='border-width:1px;padding:3px;'><div class='galleryImageHolder galleryCaptionHover' style='position:relative; width:100%; padding:0 0 75%;overflow:hidden;'><div class='galleryInnerImageHolder'><a href='uploads/3/8/5/4/38544823/5388946_orig.png' rel='lightbox[gallery413381932553911876]' title='TSPC FLIP FLOP Schematic'><img src='uploads/3/8/5/4/38544823/5388946.png' class='galleryImage' _width='400' _height='213' style='position:absolute;border:0;width:140.85%;top:0%;left:-20.42%' /><div class='galleryCaptionHolder partialImageGalleryCaption' style=''>
+					<div class='galleryCaptionHolderInnerBg'></div>
+					<div class='galleryCaptionHolderInner'>
+						<div class='galleryCaptionInnerTextHolder'>
+							<div class='galleryCaptionInnerText'>TSPC FLIP FLOP Schematic</div>
+						</div>
+					</div>
+				</div></a></div></div></div></div></div><div id='413381932553911876-imageContainer1' style='float:left;width:33.28%;margin:0;'><div id='413381932553911876-insideImageContainer1' style='position:relative;margin:5px;'><div class='galleryImageBorder' style='border-width:1px;padding:3px;'><div class='galleryImageHolder galleryCaptionHover' style='position:relative; width:100%; padding:0 0 75%;overflow:hidden;'><div class='galleryInnerImageHolder'><a href='uploads/3/8/5/4/38544823/2330193_orig.png' rel='lightbox[gallery413381932553911876]' title='Monte Carlo Simulations for Delay'><img src='uploads/3/8/5/4/38544823/2330193.png' class='galleryImage' _width='400' _height='210' style='position:absolute;border:0;width:142.86%;top:0%;left:-21.43%' /><div class='galleryCaptionHolder partialImageGalleryCaption' style=''>
+					<div class='galleryCaptionHolderInnerBg'></div>
+					<div class='galleryCaptionHolderInner'>
+						<div class='galleryCaptionInnerTextHolder'>
+							<div class='galleryCaptionInnerText'>Monte Carlo Simulations for Delay</div>
+						</div>
+					</div>
+				</div></a></div></div></div></div></div><div id='413381932553911876-imageContainer2' style='float:left;width:33.28%;margin:0;'><div id='413381932553911876-insideImageContainer2' style='position:relative;margin:5px;'><div class='galleryImageBorder' style='border-width:1px;padding:3px;'><div class='galleryImageHolder galleryCaptionHover' style='position:relative; width:100%; padding:0 0 75%;overflow:hidden;'><div class='galleryInnerImageHolder'><a href='uploads/3/8/5/4/38544823/7905144_orig.png' rel='lightbox[gallery413381932553911876]' title='Monte Carlo Simulations for Power consumption'><img src='uploads/3/8/5/4/38544823/7905144.png' class='galleryImage' _width='400' _height='202' style='position:absolute;border:0;width:148.51%;top:0%;left:-24.26%' /><div class='galleryCaptionHolder partialImageGalleryCaption' style=''>
+					<div class='galleryCaptionHolderInnerBg'></div>
+					<div class='galleryCaptionHolderInner'>
+						<div class='galleryCaptionInnerTextHolder'>
+							<div class='galleryCaptionInnerText'>Monte Carlo Simulations for Power consumption</div>
+						</div>
+					</div>
+				</div></a></div></div></div></div></div><div id='413381932553911876-imageContainer3' style='float:left;width:33.28%;margin:0;'><div id='413381932553911876-insideImageContainer3' style='position:relative;margin:5px;'><div class='galleryImageBorder' style='border-width:1px;padding:3px;'><div class='galleryImageHolder galleryCaptionHover' style='position:relative; width:100%; padding:0 0 75%;overflow:hidden;'><div class='galleryInnerImageHolder'><a href='uploads/3/8/5/4/38544823/8073253_orig.png' rel='lightbox[gallery413381932553911876]' title='Power Delay Product at Worst Corners'><img src='uploads/3/8/5/4/38544823/8073253.png' class='galleryImage' _width='400' _height='200' style='position:absolute;border:0;width:150%;top:0%;left:-25%' /><div class='galleryCaptionHolder partialImageGalleryCaption' style=''>
+					<div class='galleryCaptionHolderInnerBg'></div>
+					<div class='galleryCaptionHolderInner'>
+						<div class='galleryCaptionInnerTextHolder'>
+							<div class='galleryCaptionInnerText'>Power Delay Product at Worst Corners</div>
+						</div>
+					</div>
+				</div></a></div></div></div></div></div><div id='413381932553911876-imageContainer4' style='float:left;width:33.28%;margin:0;'><div id='413381932553911876-insideImageContainer4' style='position:relative;margin:5px;'><div class='galleryImageBorder' style='border-width:1px;padding:3px;'><div class='galleryImageHolder galleryCaptionHover' style='position:relative; width:100%; padding:0 0 75%;overflow:hidden;'><div class='galleryInnerImageHolder'><a href='uploads/3/8/5/4/38544823/4575398_orig.png' rel='lightbox[gallery413381932553911876]' title='Delay Corner measurements'><img src='uploads/3/8/5/4/38544823/4575398.png' class='galleryImage' _width='400' _height='97' style='position:absolute;border:0;width:309.28%;top:0%;left:-104.64%' /><div class='galleryCaptionHolder partialImageGalleryCaption' style=''>
+					<div class='galleryCaptionHolderInnerBg'></div>
+					<div class='galleryCaptionHolderInner'>
+						<div class='galleryCaptionInnerTextHolder'>
+							<div class='galleryCaptionInnerText'>Delay Corner measurements</div>
+						</div>
+					</div>
+				</div></a></div></div></div></div></div><div id='413381932553911876-imageContainer5' style='float:left;width:33.28%;margin:0;'><div id='413381932553911876-insideImageContainer5' style='position:relative;margin:5px;'><div class='galleryImageBorder' style='border-width:1px;padding:3px;'><div class='galleryImageHolder galleryCaptionHover' style='position:relative; width:100%; padding:0 0 75%;overflow:hidden;'><div class='galleryInnerImageHolder'><a href='uploads/3/8/5/4/38544823/4735279_orig.png' rel='lightbox[gallery413381932553911876]' title='Power Corner measurements'><img src='uploads/3/8/5/4/38544823/4735279.png' class='galleryImage' _width='400' _height='239' style='position:absolute;border:0;width:125.52%;top:0%;left:-12.76%' /><div class='galleryCaptionHolder partialImageGalleryCaption' style=''>
+					<div class='galleryCaptionHolderInnerBg'></div>
+					<div class='galleryCaptionHolderInner'>
+						<div class='galleryCaptionInnerTextHolder'>
+							<div class='galleryCaptionInnerText'>Power Corner measurements</div>
+						</div>
+					</div>
+				</div></a></div></div></div></div></div><span style='display: block; clear: both; height: 0px; overflow: hidden;'></span>
+</div>
+
+				<div style="height: 20px; overflow: hidden;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><br /><font color="#2a2a2a"><strong><font size="3">Part2 - Pipelining</font></strong><br />Used the DFF designed in Part1 and the 1-bit mirror adder designed above to implement a pipelined sequential system.<br />Determined the maximum possible frequency at which the clock can be operated such that the system still operates&nbsp;correctly at (Worst corner, 1.8V, Worst temperature).<br /><br />Maximum Frequency Obtained = 1.6GHz</font></div>
+
+<div><div style="height: 20px; overflow: hidden;"></div>
+				<div id='598017404206125603-gallery' class='imageGallery' style='line-height: 0px; padding: 0; margin: 0'>
+<div id='598017404206125603-imageContainer0' style='float:left;width:33.28%;margin:0;'><div id='598017404206125603-insideImageContainer0' style='position:relative;margin:5px;'><div class='galleryImageBorder' style='border-width:1px;padding:3px;'><div class='galleryImageHolder galleryCaptionHover' style='position:relative; width:100%; padding:0 0 75%;overflow:hidden;'><div class='galleryInnerImageHolder'><a href='uploads/3/8/5/4/38544823/7460895_orig.png' rel='lightbox[gallery598017404206125603]' title='The Sequential System Implemented'><img src='uploads/3/8/5/4/38544823/7460895.png' class='galleryImage' _width='400' _height='313' style='position:absolute;border:0;width:100%;top:-2.17%;left:0%' /><div class='galleryCaptionHolder partialImageGalleryCaption' style=''>
+					<div class='galleryCaptionHolderInnerBg'></div>
+					<div class='galleryCaptionHolderInner'>
+						<div class='galleryCaptionInnerTextHolder'>
+							<div class='galleryCaptionInnerText'>The Sequential System Implemented</div>
+						</div>
+					</div>
+				</div></a></div></div></div></div></div><div id='598017404206125603-imageContainer1' style='float:left;width:33.28%;margin:0;'><div id='598017404206125603-insideImageContainer1' style='position:relative;margin:5px;'><div class='galleryImageBorder' style='border-width:1px;padding:3px;'><div class='galleryImageHolder galleryCaptionHover' style='position:relative; width:100%; padding:0 0 75%;overflow:hidden;'><div class='galleryInnerImageHolder'><a href='uploads/3/8/5/4/38544823/7283344_orig.png' rel='lightbox[gallery598017404206125603]' title='Timing Constraints'><img src='uploads/3/8/5/4/38544823/7283344.png' class='galleryImage' _width='400' _height='220' style='position:absolute;border:0;width:136.36%;top:0%;left:-18.18%' /><div class='galleryCaptionHolder partialImageGalleryCaption' style=''>
+					<div class='galleryCaptionHolderInnerBg'></div>
+					<div class='galleryCaptionHolderInner'>
+						<div class='galleryCaptionInnerTextHolder'>
+							<div class='galleryCaptionInnerText'>Timing Constraints</div>
+						</div>
+					</div>
+				</div></a></div></div></div></div></div><div id='598017404206125603-imageContainer2' style='float:left;width:33.28%;margin:0;'><div id='598017404206125603-insideImageContainer2' style='position:relative;margin:5px;'><div class='galleryImageBorder' style='border-width:1px;padding:3px;'><div class='galleryImageHolder galleryCaptionHover' style='position:relative; width:100%; padding:0 0 75%;overflow:hidden;'><div class='galleryInnerImageHolder'><a href='uploads/3/8/5/4/38544823/9878928_orig.png' rel='lightbox[gallery598017404206125603]' title='Simulation to determine the maximum frequency'><img src='uploads/3/8/5/4/38544823/9878928.png' class='galleryImage' _width='400' _height='199' style='position:absolute;border:0;width:150.75%;top:0%;left:-25.38%' /><div class='galleryCaptionHolder partialImageGalleryCaption' style=''>
+					<div class='galleryCaptionHolderInnerBg'></div>
+					<div class='galleryCaptionHolderInner'>
+						<div class='galleryCaptionInnerTextHolder'>
+							<div class='galleryCaptionInnerText'>Simulation to determine the maximum frequency</div>
+						</div>
+					</div>
+				</div></a></div></div></div></div></div><span style='display: block; clear: both; height: 0px; overflow: hidden;'></span>
+</div>
+
+				<div style="height: 20px; overflow: hidden;"></div></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="footer-wrap">
+    	<div class="container">
+    		<div class="footer">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="free web site">Weebly</a></div>
+    	</div><!-- end container -->
+    </div><!-- end footer-wrap -->
+	</div>
+
+    <div class="nav mobile-nav">
+        <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+        <ul class="wsite-menu-default">
+        		<li id="pg506423870749017847" class="wsite-menu-item-wrap">
+        			<a
+        						href="index.html"
+        				class="wsite-menu-item"
+        				>
+        				Home
+        			</a>
+        			
+        		</li>
+        		<li id="pg729878501233056009" class="wsite-menu-item-wrap">
+        			<a
+        						href="https://www.sugandhasharma.com/uploads/3/8/5/4/38544823/cv_sharma.pdf"
+        					target="_blank"
+        				class="wsite-menu-item"
+        				>
+        				CV
+        			</a>
+        			
+        		</li>
+        		<li id="pg301133086307922829" class="wsite-menu-item-wrap">
+        			<a
+        						href="industry-experience.html"
+        				class="wsite-menu-item"
+        				>
+        				Industry Experience
+        			</a>
+        			<div class="wsite-menu-wrap" style="display:none">
+	<ul class="wsite-menu">
+		<li id="wsite-nav-230625046855088645"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="amd.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			AMD
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-204495407664726272"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="nvidia.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Nvidia
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-154977770287316115"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="blackberry.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			BlackBerry
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-809314202800559479"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="phoenix-interactive-design.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Phoenix Interactive Design
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-430315635556147731"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="christie-digital-systems.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Christie Digital Systems
+		</span>
+	</a>
+	
+</li>
+
+	</ul>
+</div>
+
+        		</li>
+        		<li id="pg322483107564495144" class="wsite-menu-item-wrap">
+        			<a
+        						href="awards.html"
+        				class="wsite-menu-item"
+        				>
+        				Awards
+        			</a>
+        			
+        		</li>
+        		<li id="pg256549450650103548" class="wsite-menu-item-wrap">
+        			<a
+        						href="other1.html"
+        				class="wsite-menu-item"
+        				>
+        				Other
+        			</a>
+        			
+        		</li>
+        		<li id="pg874517248395231023" class="wsite-menu-item-wrap">
+        			<a
+        						href="https://compneurojc.github.io/"
+        					target="_blank"
+        				class="wsite-menu-item"
+        				>
+        				Journal Club
+        			</a>
+        			
+        		</li>
+        </ul>
+    </div>
+
+	<script type="text/javascript" src="files/theme/plugins.js"></script>
+	<script type="text/javascript" src="files/theme/custom.js"></script>
+    <div id="customer-accounts-app"></div>
+    <script src="http://cdn2.editmysite.com/js/site/main-customer-accounts-site.js?buildTime=1234"></script>
+
+		<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106853726-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-106853726-1');
+</script>
+
+
+<script>
+/**
+* Function that tracks a click on an outbound link in Analytics.
+* This function takes a valid URL string as an argument, and uses that URL string
+* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+* using 'navigator.sendBeacon' in browser that support it.
+*/
+var trackOutboundLink = function(url) {
+   ga('send', 'event', 'outbound', 'click', url, {
+     'transport': 'beacon',
+     'hitCallback': function(){document.location = url;}
+   });
+}
+</script>
+
+
+	</body>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Embedded Microprocessor Systems - SUGANDHA SHARMA</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1691178341" title="wsite-theme-css" />
+<link href='http://cdn2.editmysite.com/fonts/Lato/font.css?2' rel='stylesheet' type='text/css' />
+<link href='http://cdn2.editmysite.com/fonts/Fjalla_One/font.css?2' rel='stylesheet' type='text/css' />
+
+<link href='http://cdn2.editmysite.com/fonts/Questrial/font.css?2' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {font-family:"Questrial" !important;}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {font-style:normal !important;}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+@media screen and (min-width: 767px) {.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {font-size:77px !important;}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+}</style>
+<style>
+.wsite-background {background-image: url("/uploads/3/8/5/4/38544823/background-images/1520324753.jpeg") !important;background-repeat: no-repeat !important;background-position: 50% 50% !important;background-size: 100% !important;background-color: transparent !important;background: inherit;}
+body.wsite-background {background-attachment: fixed !important;}.wsite-background.wsite-custom-background{ background-size: cover !important}
+</style>
+		<script src='files/templateArtifacts.js?1674078388'></script>
+<script>
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var ASSETS_BASE = '//cdn2.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+</script>
+<script src='https://cdn2.editmysite.com/js/jquery-1.8.3.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">
+		function initCustomerAccountsModels() {
+					(function(){_W.setup_rpc({"url":"\/ajax\/api\/JsonRPC\/CustomerAccounts\/","actions":{"CustomerAccounts":[{"name":"login","len":2,"multiple":false,"standalone":false},{"name":"logout","len":0,"multiple":false,"standalone":false},{"name":"getSessionDetails","len":0,"multiple":false,"standalone":false},{"name":"getAccountDetails","len":0,"multiple":false,"standalone":false},{"name":"getOrders","len":0,"multiple":false,"standalone":false},{"name":"register","len":4,"multiple":false,"standalone":false},{"name":"emailExists","len":1,"multiple":false,"standalone":false},{"name":"passwordReset","len":1,"multiple":false,"standalone":false},{"name":"passwordUpdate","len":3,"multiple":false,"standalone":false},{"name":"validateSession","len":1,"multiple":false,"standalone":false}]},"namespace":"_W.CustomerAccounts.RPC"});
+_W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":"_W.CustomerAccounts.BackboneModelData","collection_namespace":"_W.CustomerAccounts.BackboneCollectionData","bootstrap_namespace":"_W.CustomerAccounts.BackboneBootstrap","models":{"CustomerAccounts":{"_class":"CustomerAccounts.Model.CustomerAccounts","defaults":null,"validation":null,"types":null,"idAttribute":null,"keydefs":null}},"collections":{"CustomerAccounts":{"_class":"CustomerAccounts.Collection.CustomerAccounts"}},"bootstrap":[]});
+})();
+		}
+		if(document.createEvent && document.addEventListener) {
+			var initEvt = document.createEvent('Event');
+			initEvt.initEvent('customerAccountsModelsInitialized', true, false);
+			document.dispatchEvent(initEvt);
+		} else if(document.documentElement.initCustomerAccountsModels === 0){
+			document.documentElement.initCustomerAccountsModels++
+		}
+		</script>
+		<script type="text/javascript"> _W = _W || {}; _W.securePrefix='UNSET'; </script><script>_W = _W || {};
+			_W.customerLocale = "en_US";
+			_W.storeName = null;
+			_W.isCheckoutReskin = false;
+			_W.storeCountry = "CA";
+			_W.storeCurrency = "USD";
+			_W.storeEuPrivacyPolicyUrl = "";
+			com_currentSite = "744217990321245025";
+			com_userID = "38544823";</script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"> _W.recaptchaUrl = "https://www.google.com/recaptcha/api.js"; </script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	function initFlyouts(){
+		initPublishedFlyoutMenus(
+			[{"id":"506423870749017847","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"729878501233056009","title":"CV","url":"https:\/\/www.sugandhasharma.com\/uploads\/3\/8\/5\/4\/38544823\/cv_sharma.pdf","target":"_blank","nav_menu":false,"nonclickable":false},{"id":"301133086307922829","title":"Industry Experience","url":"industry-experience.html","target":"","nav_menu":false,"nonclickable":false},{"id":"322483107564495144","title":"Awards","url":"awards.html","target":"","nav_menu":false,"nonclickable":false},{"id":"256549450650103548","title":"Other","url":"other1.html","target":"","nav_menu":false,"nonclickable":false},{"id":"874517248395231023","title":"Journal Club","url":"https:\/\/compneurojc.github.io\/","target":"_blank","nav_menu":false,"nonclickable":false}],
+			"129253777214349301",
+			'',
+			'active',
+			false,
+			{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+			{}
+		)
+	}
+//-->
+</script>
+		
+		
+	</head>
+	<body class="no-header-page wsite-theme-light  wsite-page-embedded-microprocessor-systems"><div class="wrapper">
+    <div class="paris-header">
+      <div class="container">
+        <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+      	<div class="logo"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">SUGANDHA SHARMA</span>
+	
+	</a>
+
+</span></div>
+        <div class="nav desktop-nav"><ul class="wsite-menu-default">
+		<li id="pg506423870749017847" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg729878501233056009" class="wsite-menu-item-wrap">
+			<a
+						href="https://www.sugandhasharma.com/uploads/3/8/5/4/38544823/cv_sharma.pdf"
+					target="_blank"
+				class="wsite-menu-item"
+				>
+				CV
+			</a>
+			
+		</li>
+		<li id="pg301133086307922829" class="wsite-menu-item-wrap">
+			<a
+						href="industry-experience.html"
+				class="wsite-menu-item"
+				>
+				Industry Experience
+			</a>
+			<div class="wsite-menu-wrap" style="display:none">
+	<ul class="wsite-menu">
+		<li id="wsite-nav-230625046855088645"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="amd.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			AMD
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-204495407664726272"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="nvidia.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Nvidia
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-154977770287316115"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="blackberry.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			BlackBerry
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-809314202800559479"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="phoenix-interactive-design.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Phoenix Interactive Design
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-430315635556147731"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="christie-digital-systems.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Christie Digital Systems
+		</span>
+	</a>
+	
+</li>
+
+	</ul>
+</div>
+
+		</li>
+		<li id="pg322483107564495144" class="wsite-menu-item-wrap">
+			<a
+						href="awards.html"
+				class="wsite-menu-item"
+				>
+				Awards
+			</a>
+			
+		</li>
+		<li id="pg256549450650103548" class="wsite-menu-item-wrap">
+			<a
+						href="other1.html"
+				class="wsite-menu-item"
+				>
+				Other
+			</a>
+			
+		</li>
+		<li id="pg874517248395231023" class="wsite-menu-item-wrap">
+			<a
+						href="https://compneurojc.github.io/"
+					target="_blank"
+				class="wsite-menu-item"
+				>
+				Journal Club
+			</a>
+			
+		</li>
+</ul>
+</div>
+      </div><!-- end .container -->
+	  </div><!-- end .header -->
+
+    <div class="main-wrap">
+      <div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-7 wsite-custom-background"  >
+		<div class="wsite-section-content">
+        <div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title" style="text-align:left;"><font color="#2a2a2a">Media player system</font></h2>
+
+<div class="paragraph" style="text-align:left;"><font color="#2a2a2a">Code: </font><a href="https://github.com/s72sue/Media-Player" target="_blank"><font color="#da4444">github repository</font></a><br /><br /><font color="#2a2a2a">Designed and implemented a media player system in 'C'.&nbsp;The system was capable of playing different songs at normal, double and half speed. This was implemented using a&nbsp;combination of polling, synchronization, timers and interrupt handlers&nbsp;to interface with the devices (Push buttons, LEDs , Switches) on the </font><strong style="color:rgb(42, 42, 42)">Altera DE2 </strong><font color="#2a2a2a">board. NIOS II IDE was used for development.</font><br /><br /><strong style="color:rgb(42, 42, 42)">Functions:</strong><font color="#2a2a2a"> Play (Normal speed),&nbsp;Stop,&nbsp;Reverse,&nbsp;Forward (double speed), Half Speed, Delay</font><br /><br /></div>
+
+<div><div class="wsite-image wsite-image-border-border-width:0 " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/3/8/5/4/38544823/1409567114.jpg" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Altera DE2 Development and Education Board</div>
+</div></div>
+
+<h2 class="wsite-content-title" style="text-align:left;"><font color="#2a2a2a">lab1</font></h2>
+
+<div><div style="margin: 10px 0 0 -10px">
+<a title="Download file: project_part1.c" href="uploads/3/8/5/4/38544823/project_part1.c"><img src="http://www.weebly.com/weebly/images/file_icons/c.png" width="36" height="36" style="float: left; position: relative; left: 0px; top: 0px; margin: 0 15px 15px 0; border: 0;" /></a><div style="float: left; text-align: left; position: relative;"><table style="font-size: 12px; font-family: tahoma; line-height: .9;"><tr><td colspan="2"><b> project_part1.c</b></td></tr><tr style="display: none;"><td>File Size:  </td><td>17 kb</td></tr><tr style="display: none;"><td>File Type:  </td><td> c</td></tr></table><a title="Download file: project_part1.c" href="uploads/3/8/5/4/38544823/project_part1.c" style="font-weight: bold;">Download File</a></div>
+</div>
+
+<hr style="clear: both; width: 100%; visibility: hidden"></hr></div>
+
+<div class="paragraph"><font color="#a82e2e"><strong>PHASE1</strong><br /></font><br /><font color="#2a2a2a">Phase1 required the interfacing between the push button, DIP switches, LEDs and seven segment displays. The aim was to simultaneously allow a user to light an LED or seven segment display depending on which switches were active, and which buttons were pressed.<br /><br />Two ISR's were created for implementing the functionality in phase1:&nbsp;the timer ISR, and the button ISR. The button ISR is initialized at the start of the program, and an interrupt is generated upon a button press. Whenever a button is pressed, the interrupt handler checks whether or not the first or second buttons are pressed, and stores this value into a global variable. The first and second button corresponds to LED-activation, or seven-segment display activation, respectively. If either button is pressed, the ISR will do three things: store the status of the first 8 DIP switches into a global variable, set a global variable known as timer_count to 0, initialize the timer to start sending timer interrupts every second. The timer ISR, once set, will handle an interrupt every second. During each interrupt, a global variable (denoted as timer_flag) will flag on.<br /><br />The LEDs and seven-segment displays are activated in the main function in conjunction with the ISRs. The main function will loop until either button 1 or 2 has been flagged as pressed. Once button 1 or 2 has been pressed, the main function will then loop until timer_count equals 8. Each time the timer_flag is detected to be true, the function will do the following:<br /><br />- Set timer_flag to be false<br />- Increment timer_count<br />- Check to see which buttons have been pressed</font><ul><li><span><font color="#2a2a2a">if button 1 was pressed, store the current active DIP switches as button1_switches, and set a button 1 count to be 0 (denoted as btn1_count).</font></span></li><li><span><font color="#2a2a2a">if button 2 was pressed, store the current active DIP switches as button2_switches, and set a button 2 count to be 0 (denoted as btn2_count).</font></span></li></ul><font color="#2a2a2a">- Clear button flag<br />- Check the value of btn1_count<br />&nbsp; If the value is not 8</font><ul><li><span><font color="#2a2a2a">Determine the button1_switches value that corresponds to the btn1_count</font></span></li><li><span><font color="#2a2a2a">If 1, set LED1 to be on.</font></span></li><li><span><font color="#2a2a2a">If 0, set LED1 to be off.</font></span></li><li><span><font color="#2a2a2a">Increment btn1_count</font></span></li></ul><font color="#2a2a2a">&nbsp; If the value is equal to 8</font><ul><li><span><font color="#2a2a2a">Turn off LED1</font></span></li></ul><font color="#2a2a2a">- Check the value of btn2_count<br />&nbsp; If the value is not 8</font><ul><li><span><font color="#2a2a2a">Determine the button2_switches value the corresponds to the btn2_count</font></span></li><li><span><font color="#2a2a2a">If 1, set the seven-segment display to be on.</font></span></li><li><span><font color="#2a2a2a">If 0, set the seven segment display to be off.</font></span></li><li><span><font color="#2a2a2a">Increment btn1_count</font></span></li></ul><font color="#2a2a2a">&nbsp; If the value is equal to 8</font><ul><li><span><font color="#2a2a2a">Turn off seven segment display</font></span></li></ul><font color="#2a2a2a"><br />Once timer_count is 8, the code will deactivate the timer. This code is thus sufficient to service the LEDs and seven-segment displays depending on which buttons are pushed and which switches are active. Note that this code sufficiently handles the use cases of when buttons are pressed &ldquo;multiple&rdquo; times during servicing, or if the switches are changed during servicing.</font><br /><br /><br /><font color="#a82e2e"><strong>SYNCHRONIZATION METHODS</strong><br /></font><br /><font color="#2a2a2a">For phase1, a background task must occur (monitoring switch states for processing the LEDs/display). If buttons are pushed, they must be serviced right away, and this will immediately affect the background task. Upon pressing a button, the state of the active switches will be stored immediately.<br /><br />Knowing the above information, the best button synchronization method needs to be defined to be the one that: (1) minimizes missed button pushes, (2) minimizes it&rsquo;s effect on the background task when a button is not pushed, and (3) services button pushes as quickly as possible. Because switch synchronization occurs whenever a button is pressed, the best synchronization method was solely be determined based on button synchronization performance.&nbsp;Of the synchronization methods in question (blind polling, periodic polling, occasional polling, busy waiting, and interrupts), interrupts performed the best when synchronizing between buttons.<br /><br /><br /><strong>Advantages of using Interrupts:</strong></font><ul><li><span><font color="#2a2a2a"><strong><em>Avoid Missed Cycles:</em></strong> Interrupts avoid missed cycles. All variants of polling (with the exception of busy waiting) run the risk of an unnoticed button push, depending on the frequency of polling. This, with respect to phase 1&rsquo;s task, is simply unacceptable. This is because the program&rsquo;s functionality is largely based on its responsiveness to button pushes.</font></span></li><li><span><font color="#2a2a2a"><strong><em>Background Task Performance:</em></strong> Interrupts also provide the best performance with regard to the background task. When a button is not pressed, the program should cycle through the stored switch values, and light the LEDs or displays as appropriate. Thus it is important that synchronization should not interfere with the process, especially since this operates on a timed basis. This makes interrupts advantageous, as the background task will only be affected when a button is pressed.</font></span></li><li><span><font color="#2a2a2a"><strong><em>Ease of Implementation: </em></strong>Interrupt implementation was relatively straightforward and was done by following steps:</font></span></li></ul><font color="#2a2a2a">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Setup an Interrupt vector<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Reset the edge capture register by writing a value to it<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Enable the interrupts for button1 and button2<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Implement the Interrupt Service Routine keeping it short and simple for better performance<br /><br /><br /><strong>Disadvantages of using Interrupts:</strong></font><ul><li><span><font color="#2a2a2a"><strong><em>Ease of testing and debugging: </em></strong>Interrupts are generally difficult to debug as interrupts are much more device-oriented as opposed to CPU oriented. While a debugger still could have been used in this case (as the code is simulated on hardware), one runs the risk of the program performing inaccurately as the program is stopped at each breakpoint which can potentially affect the performance. Thus, testing of the interrupt service routine was not easy. The Interrupt service routine was kept short and simple for better performance and was tested by using printf() statements and then running the program to make sure that the program was going through the ISR and printing the contents of the printf() statements on the console. Though it is not recommended to have printf() statements in the ISR since they slow down the ISR, it is still one way of quickly verifying whether the ISR is setup correctly.</font></span></li><li><span><font color="#2a2a2a"><strong><em>Longer latency as seen by the CPU:</em></strong> Interrupts may suffer longer latency (as seen by the cpu) when it comes to data transfer. Busy waiting, occasional polling, and periodic polling, for example, can be designed to minimize latency as seen by the CPU. However, interrupts compensate this with the fact that interrupts provide a reliable means of detecting button pushes, while allowing the background task to run largely unaffected.</font></span></li></ul><font color="#2a2a2a"><br />To summarize, interrupts are advantageous because they avoid missed button presses, do not affect the background task when data is not available, and minimize latency as seen by the device. Interrupts are also fairly easy to implements, as one must simply&nbsp;initialize an ISR. However, Interrupts are much more difficult to debug as interrupts are much more device-oriented as opposed to CPU oriented.&nbsp;<br /><br /></font><br /><font color="#a82e2e"><strong>PHASE2</strong><br /></font><br /><font color="#2a2a2a">The goal of phase II of lab1 was to design an experiment to compare two different synchronization methods to respond to a pulse generated by an EGM. Two synchronization methods used by our group were Interrupts and periodic polling. The main objective in both cases was to minimise the number of missed pulses.<br /><br />Each of the two methods were tested and analysed and it was found that the approach to use interrupts gives an overall better performance as compare to Periodic polling (specially with respect to our lab obejective i.e., minimizing the number of missed pulses). This is because it reduces the missed pulses to zero and provides for higher number of background tasks processed. Moreover, the maximum latency is also lower and more consistent for interrupts than it is for polling.<br /><br /><strong>Results Obtained:</strong><br />i) The fractional value of max Latency expressed is a fraction of the period e.g, 81 / 1024th(s) refers to 81 / 1024th(s) of a period.<br />ii) Tasks refers to the total background task units processed<br /></font><br /></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/3/8/5/4/38544823/7249670_orig.png" alt="Picture" style="width:100%;max-width:865px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/3/8/5/4/38544823/1435085_orig.png" alt="Picture" style="width:100%;max-width:829px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/3/8/5/4/38544823/6093025_orig.png" alt="Picture" style="width:100%;max-width:818px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:left">
+<a>
+<img src="uploads/3/8/5/4/38544823/6863987_orig.png" alt="Picture" style="width:100%;max-width:815px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:left;"><font color="#2a2a2a"><strong>Conclusion:</strong> Interrupts provide a better overall performance as compared to polling for achieving our design objectives<span>.</span></font></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<h2 class="wsite-content-title" style="text-align:left;"><font color="#2a2a2a">lab2</font></h2>
+
+<div><div style="margin: 10px 0 0 -10px">
+<a title="Download file: project_part2.c" href="uploads/3/8/5/4/38544823/project_part2.c"><img src="http://www.weebly.com/weebly/images/file_icons/c.png" width="36" height="36" style="float: left; position: relative; left: 0px; top: 0px; margin: 0 15px 15px 0; border: 0;" /></a><div style="float: left; text-align: left; position: relative;"><table style="font-size: 12px; font-family: tahoma; line-height: .9;"><tr><td colspan="2"><b> project_part2.c</b></td></tr><tr style="display: none;"><td>File Size:  </td><td>17 kb</td></tr><tr style="display: none;"><td>File Type:  </td><td> c</td></tr></table><a title="Download file: project_part2.c" href="uploads/3/8/5/4/38544823/project_part2.c" style="font-weight: bold;">Download File</a></div>
+</div>
+
+<hr style="clear: both; width: 100%; visibility: hidden"></hr></div>
+
+<div class="paragraph" style="text-align:left;"><font color="#2a2a2a">The goal of lab2 was to build up on lab1 in order to implement a media player system.&nbsp;The figure below gives a visual representation of how our code was structured:</font></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/3/8/5/4/38544823/3070468_orig.png" alt="Picture" style="width:100%;max-width:310px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:left;"><font color="#2a2a2a">The<strong> &lsquo;ISR Section&rsquo;</strong> of our code is responsible for servicing Altera DE2 button interrupts. This is achieved through the Button_ISR method. The Button_ISR method identifies which buttons were pressed, and toggles the appropriate global flags true or false depending on which buttons were pressed. For example, our code has 4 main global flags: play, stop, next_song, and previous_song. If the next button is pressed, then the next_song flag is toggled true while the rest are toggled false. These flags integrate with the main section our code, allowing users to control the media player depending on which buttons are pressed.<br /><br />The<strong> &lsquo;Media Control&rsquo; </strong>section is responsible for initializing the media controller, building song clusters, and controlling media player functionality (next, previous, stop, and play). The init method is responsible for initializing the required hardware for future use. For example, this function initializes the SD card, the MBR, the BS, the audio codec, and the LCD. Next, the buildCluster method builds a song cluster for the next song in the list. This cluster is stored as a global structure. Finally, our control method determines whether the media player is to play, stop playing, or toggle songs. This method essentially busy waits until a play, next, or previous flag is set through the button_ISR. When a button is pressed, the program will exit this busy loop, and perform the action that is associated by the flag that was just set.<br /><br />The<strong> &lsquo;Play Options&rsquo;</strong> section is comprised of the 5 methods: normal_speed, double_speed, half_speed, reverse, and delay_channel. Each of these methods initially call upon the buildCluster method to store the cluster of the current song. The code then cycles through each cycle, and then cycles through the cluster&rsquo;s bytes. These bytes are then manipulated as required by the method, and then sent to the audio codec for audio playback. For example, normal speed will send all bytes to the audio codec from start to finish, whereas reverse play will send the bytes to the audio codec in a reversed order. As a side note, these methods will only function if the play flag is true. If at any moment the stop function flags on, the code will immediately break and stop playing.<br /><br />Finally, the <strong>main </strong>section consists of the main method. This section will call upon the init() function to initialize the hardware. The main method will default to the control method, which busy loops until a button is pressed. Upon pressing a button, the busy loop will break, and the main loop will read which switches are high. Depending on which switches are high, the main loop will call upon the appropriate play method and loop back to the media control method upon finishing. Through this structure, the user is able to toggle songs and play/pause at their desire.<br /></font><br /><br /><font color="#a82e2e"><font size="3"><strong>&#65279;Issues that Impacted the Audio Playback Performance</strong><br /></font></font><br /><font color="#2a2a2a">The .wav files to be played were divided into sectors which were further split up into clusters. In general for all modes, following were taken into consideration to enhance the audio playback performance:&nbsp;</font><ul><li><span><font color="#2a2a2a">Ensured that the FIFO is empty , before writing data (bytes) to the codec while ( IORD( AUD_FULL_BASE, 0)) {}</font></span></li><li><font color="#2a2a2a"><span>Used a buffer to store all the clusters within a particular sector in order to avoid latency in retrieving data for each cluster separately and then playing the song&nbsp;</span><span>[ get_rel_sector( &amp;df, buffer, cc, sector++) ].</span></font></li></ul><font color="#2a2a2a"><br /><strong>Double Speed:</strong>&nbsp;For playing the song at the double speed, 2 out of every four channels were skipped. In this mode, the while loop which iterates over the different sectors in the song takes approximately half of the time to execute (as compared to the normal case) since we are skipping some channels. This implies that the SD card is required to supply data (for successive sectors) at a much faster rate.&nbsp;<br /><br /><strong>Half Speed:</strong> For this mode, the same channels were played twice to produce the half speed effect.&nbsp;For this mode, it was not possible to achieve the play speed which was exactly half of the normal play mode . This might have been due to the performance issues related to the rate of data access from the SD card and the limitation on the efficiency of the audio codec player.<br /><br /><strong>Delay Mode:</strong> For the delay mode, a one second delay was caused between the right and left channels.<br />It was difficult to verify that the delay caused between the two channels was exactly one second by simply listening to the audio.<span>Moreover, for the case when a particular sector is finished, there are still some right channels left to be executed. Initially these remaining right channels were being missed</span><span>&nbsp;and thus the audio sounded cut-off at the end. On reiterating through&nbsp;our logic we found that we needed to play the left over right channels after each sector (left channels) have been played. This was achieved by implementing two while loops &ndash; One to play the remaining channels in the current cycle through the circular buffer and the other loop to play the recently copied right channels starting from the zero of the circular buffer up-till the current position of the counter.&nbsp;</span><br /><br /><strong>Reverse Mode: </strong>This was implemented by playing the sectors in the opposite direction<strong>.&nbsp;</strong>After the initial implementation, it was found that the sound didn&rsquo;t appear like the reversed song. Hence the logic was reworked and it was found that I was reversing the channels but not the sectors. The sectors were still being executed from the beginning till the end. This was fixed quickly by changing the starting value of the sector followed by successively decrementing the sectors for each iteration</font></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="footer-wrap">
+    	<div class="container">
+    		<div class="footer">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="free web site">Weebly</a></div>
+    	</div><!-- end container -->
+    </div><!-- end footer-wrap -->
+	</div>
+
+    <div class="nav mobile-nav">
+        <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+        <ul class="wsite-menu-default">
+        		<li id="pg506423870749017847" class="wsite-menu-item-wrap">
+        			<a
+        						href="index.html"
+        				class="wsite-menu-item"
+        				>
+        				Home
+        			</a>
+        			
+        		</li>
+        		<li id="pg729878501233056009" class="wsite-menu-item-wrap">
+        			<a
+        						href="https://www.sugandhasharma.com/uploads/3/8/5/4/38544823/cv_sharma.pdf"
+        					target="_blank"
+        				class="wsite-menu-item"
+        				>
+        				CV
+        			</a>
+        			
+        		</li>
+        		<li id="pg301133086307922829" class="wsite-menu-item-wrap">
+        			<a
+        						href="industry-experience.html"
+        				class="wsite-menu-item"
+        				>
+        				Industry Experience
+        			</a>
+        			<div class="wsite-menu-wrap" style="display:none">
+	<ul class="wsite-menu">
+		<li id="wsite-nav-230625046855088645"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="amd.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			AMD
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-204495407664726272"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="nvidia.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Nvidia
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-154977770287316115"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="blackberry.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			BlackBerry
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-809314202800559479"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="phoenix-interactive-design.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Phoenix Interactive Design
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-430315635556147731"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="christie-digital-systems.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Christie Digital Systems
+		</span>
+	</a>
+	
+</li>
+
+	</ul>
+</div>
+
+        		</li>
+        		<li id="pg322483107564495144" class="wsite-menu-item-wrap">
+        			<a
+        						href="awards.html"
+        				class="wsite-menu-item"
+        				>
+        				Awards
+        			</a>
+        			
+        		</li>
+        		<li id="pg256549450650103548" class="wsite-menu-item-wrap">
+        			<a
+        						href="other1.html"
+        				class="wsite-menu-item"
+        				>
+        				Other
+        			</a>
+        			
+        		</li>
+        		<li id="pg874517248395231023" class="wsite-menu-item-wrap">
+        			<a
+        						href="https://compneurojc.github.io/"
+        					target="_blank"
+        				class="wsite-menu-item"
+        				>
+        				Journal Club
+        			</a>
+        			
+        		</li>
+        </ul>
+    </div>
+
+	<script type="text/javascript" src="files/theme/plugins.js"></script>
+	<script type="text/javascript" src="files/theme/custom.js"></script>
+    <div id="customer-accounts-app"></div>
+    <script src="http://cdn2.editmysite.com/js/site/main-customer-accounts-site.js?buildTime=1234"></script>
+
+		<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106853726-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-106853726-1');
+</script>
+
+
+<script>
+/**
+* Function that tracks a click on an outbound link in Analytics.
+* This function takes a valid URL string as an argument, and uses that URL string
+* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+* using 'navigator.sendBeacon' in browser that support it.
+*/
+var trackOutboundLink = function(url) {
+   ga('send', 'event', 'outbound', 'click', url, {
+     'transport': 'beacon',
+     'hitCallback': function(){document.location = url;}
+   });
+}
+</script>
+
+
+	</body>
+</html>
